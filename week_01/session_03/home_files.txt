@@ -1,0 +1,24 @@
+total 64
+drwxr-x---+ 22 typhoon  staff   704 Mar 29 14:17 .
+drwxr-xr-x   9 root     admin   288 Mar 27 20:10 ..
+-r--------   1 typhoon  staff     7 Mar 25 16:30 .CFUserTextEncoding
+-rw-r--r--@  1 typhoon  staff  6148 Mar 25 17:38 .DS_Store
+drwx------+  4 typhoon  staff   128 Mar 27 17:14 .Trash
+-rw-r--r--   1 typhoon  staff    52 Mar 27 15:02 .gitconfig
+-rw-------@  1 typhoon  staff    20 Mar 29 14:17 .lesshst
+drwx------   6 typhoon  staff   192 Mar 25 17:37 .ssh
+drwxr-xr-x@  5 typhoon  staff   160 Mar 25 17:10 .vscode
+-rw-------   1 typhoon  staff  3033 Mar 27 17:55 .zsh_history
+drwx------  13 typhoon  staff   416 Mar 27 17:55 .zsh_sessions
+-rw-------   1 typhoon  staff   464 Mar 25 17:29 0611
+-rw-r--r--   1 typhoon  staff   110 Mar 25 17:29 0611.pub
+drwx------+  9 typhoon  staff   288 Mar 27 16:26 Desktop
+drwx------+  3 typhoon  staff    96 Mar 25 13:11 Documents
+drwx------+  5 typhoon  staff   160 Mar 27 14:58 Downloads
+drwx------@ 80 typhoon  staff  2560 Mar 27 13:59 Library
+drwxr-xr-x   5 typhoon  staff   160 Mar 27 16:25 LinuxPractice
+drwx------   4 typhoon  staff   128 Mar 27 14:01 Movies
+drwx------+  3 typhoon  staff    96 Mar 25 13:11 Music
+drwx------+  4 typhoon  staff   128 Mar 25 16:31 Pictures
+drwxr-xr-x+  4 typhoon  staff   128 Mar 25 13:11 Public
+Sat Mar 29 14:32:23 +08 2025
