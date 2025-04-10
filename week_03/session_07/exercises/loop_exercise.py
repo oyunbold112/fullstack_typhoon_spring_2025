@@ -67,3 +67,8 @@ print(kwadrat_jaglaast)
 # dasgal 9
 
 jimsnuud = ["alim", "toor", "mango", "guzeelzgene"]
+
+for index, fruit in enumerate(jimsnuud):
+    print(f"{index}. {fruit}")
+
+# dasgal 10
