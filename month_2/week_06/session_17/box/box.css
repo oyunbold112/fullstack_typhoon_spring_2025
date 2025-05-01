@@ -1,0 +1,45 @@
+.box{
+    width: 400px;
+    height: 400px;
+    background-color: rgb(238, 52, 83);
+    padding: 30px;
+    margin: 30px;
+    align-content: center;
+    margin: auto;
+}
+#text{
+    width: 200px;
+    height: 300px;
+    background-color: red;
+    padding: 20px;
+    border: 10px dashed black;
+    border-bottom: 10px solid black;
+    margin: auto;
+    align-content: center;
+}
+
+.big {
+    width: 600px;
+    height: 500px;
+    background-color: rgb(242, 116, 137);
+    overflow: hidden;
+    overflow: scroll;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    margin: 20px;
+    border-radius: 50%;
+}
+
+.shadow1{
+    box-shadow: 5px 5px grey;
+}
+.shadow2{
+    box-shadow: 5px 5px 5px grey;
+}
+.shadow3{
+    box-shadow: 5px 5px 5px 5px grey;
+}

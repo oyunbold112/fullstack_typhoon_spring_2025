@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            color: tomato;
+            text-align: left;
+        }
+        p{
+            background-color: aqua;
+            font-family:'Courier New', Courier, monospace;
+        }
+        .pink{
+            background-color: pink;
+            color: white;
+            font-family: Home;
+        }
+        #blue {
+            background-color: pink;
+            color: white;
+            font-family: Noto;
+        }
+        @font-face {
+            font-family: Noto;
+            src: url(Tagesschrift-Regular.ttf);
+        }
+        @font-face {
+            font-family: Home;
+            src: url(HomemadeApple-Regular.ttf);
+        }
+        .one {
+            font-style: italic;
+            font-family:'Courier New', Courier, monospace;
+        }
+        .two {
+            font-family: Noto;
+            font-weight: bold;
+        }
+        .three {
+            font-family: Home;
+            font-size: 20px
+        }
+        .lowercase {
+            font-family: Home;
+            font-size: 15px;
+            text-transform: capitalize;
+            text-decoration: underline;
+            word-spacing: 5px;
+        }
+        .uppercase {
+            text-transform: uppercase;
+            text-decoration: double;
+            word-spacing: 10px;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        .shadow {
+            text-shadow: 2px 2px 15px black;
+        }
+        .link {
+            color: red;
+        }
+        .link:hover{
+            color: blue;
+        }
+        .link:active{
+            color: yellow;
+        }
+        .link:visited{
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h2>css - text</h2>
+    <p id="blue">Lorem ipsum dolor sit amet</p>
+    <p class="pink">Лорем ипсум долор сит амет</p>
+    <ul type="None">
+        <li class="one">Im one</li>
+        <li class="two">Im two</li>
+        <li class="three">Im three</li>
+    </ul>
+    <h4>text-transform</h4>
+    <p class="lowercase">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque odit ut eaque dolore, hic vero eos praesentium qui, culpa corporis enim voluptatem, in explicabo a itaque sit molestias optio. Accusamus.</p>
+    <p class="uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum a sequi incidunt iure quidem consequatur! Nemo optio, perferendis inventore fuga distinctio dolor autem officia quaerat, facilis ut quisquam est quasi?</p>
+    <a href="google.com">Google</a>
+    <p class="shadow">shadow</p>
+    <ul>
+        <li><a class="link" href="">link</a></li>
+    </ul>
+</body>
+</html>

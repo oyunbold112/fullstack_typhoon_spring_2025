@@ -1,0 +1,31 @@
+.hicheeliinheregsel {
+    list-style-type: circle;
+}
+
+.durtaikino {
+    list-style-type: lower-roman;
+}
+
+.jims {
+    list-style-type: lower-alpha;
+}
+
+.amitan {
+    list-style-type: square;
+}
+
+.hogjim {
+    list-style-image: url('star.png');
+}
+.hogjim li {
+    margin-top: 10px;
+}
+.vegetables{
+    list-style-type: square;
+}
+.fruits {
+    list-style-type: decimal;
+}
+.dairy{
+    list-style-type: circle;
+}
