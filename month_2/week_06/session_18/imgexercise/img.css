@@ -1,0 +1,24 @@
+img:hover {
+    filter: grayscale(0);
+}
+img {
+    filter: grayscale();
+    width: 50%;
+    border-radius: 50%;
+    padding: 10px;
+    border: 2px dashed black;
+    object-fit: contain;
+    filter: sepia(0.5);
+}
+
+.img2 {
+    background-image: url('https://picsum.photos/600/900'), radial-gradient(orange, pink);
+    background-size: 25% 100%;
+    background-repeat: repeat-x;
+    width: 500px;
+    height: 200px;
+    
+}
+
+
+

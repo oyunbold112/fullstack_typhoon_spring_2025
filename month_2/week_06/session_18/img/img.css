@@ -1,0 +1,13 @@
+body {
+    background-image: url(map_css_world.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.img1 {
+    background-image: url();
+}
+.img2 {
+    background-image: url();
+}
