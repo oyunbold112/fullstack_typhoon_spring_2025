@@ -1,0 +1,140 @@
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+header {
+    background-color: #ffffff;
+    height: 86px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+h3 {
+    color: #212121;
+    margin: 0;
+    font-family: Moul;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    text-align: center;
+    width: 100px;
+}
+a {
+    color: #212121;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-decoration: none;
+}
+.navbar {
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+
+
+.signin {
+    display: inline-flex;
+    color: #212121;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+.signup {
+    display: inline-flex;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 16px 32px;
+    border-radius: 8px;
+    background: #4BAB66;
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(../fonts/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: Moul;
+    src: url(../fonts/Moul-Regular.ttf);
+}
+img {
+    width: 552px;
+    height: 598.183px;
+    margin-left: 60px;
+}
+.body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bold {
+    max-width: 647.75px;
+    color: #212121;
+    font-family: Lato;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 65px; /* 135.417% */
+}
+
+.home {
+    display: inline-flex;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: #4BAB66;
+    gap: 10px;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.help {
+    display: inline-flex;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: inline-flex;
+    border-radius: 8px;
+    background: #D8E392;
+    color: #212121;
+    font-family: Lato;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 20px;
+    
+}
+.light {
+    color: #212121;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 160% */
+    max-width: 648px;
+}
