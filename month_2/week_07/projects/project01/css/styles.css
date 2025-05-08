@@ -36,8 +36,6 @@ a {
     text-decoration: none;
 }
 
-
-
 .signin {
     display: inline-flex;
     color: #212121;
@@ -137,4 +135,10 @@ img {
     font-weight: 500;
     line-height: 32px; /* 160% */
     max-width: 648px;
+}
+
+.signinup {
+    display: flex;
+    gap: 31px;
+    align-items: center;
 }

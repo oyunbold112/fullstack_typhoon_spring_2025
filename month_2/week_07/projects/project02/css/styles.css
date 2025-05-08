@@ -1,0 +1,179 @@
+@font-face {
+    font-family: Merriweather;
+    src: url('../fonts/Merriweather-VariableFont_opsz\,wdth\,wght.ttf');
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+main {
+    display: inline-flex; 
+    max-width: 1512px;
+    max-height: 982px;
+    margin: 0 auto;
+}
+.smallthree {
+    width: 80px;
+    margin-right: 24px;
+}
+
+.smallthree .blueborder {
+    border: 3px solid #1A75FF;
+}
+
+.smallthree img {
+    width: 80px;
+    height: 104px;
+    border-radius: 8px;
+}
+
+.big {
+    margin-right: 56px;
+}
+
+.big img {
+    width: 494px;
+    height: 632px;
+}
+
+.other {
+    width: 533px;
+}
+
+.title {
+    text-transform: capitalize;
+    color: #000;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Merriweather;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+.desc {
+    color: rgba(0, 0, 0, 0.60);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Merriweather;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.name {
+    font-family: Merriweather;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color:#1A75FF;
+}
+
+.sags {
+    display: flex;
+    width: 533px;
+    padding: 16px 4px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    background: #1A75FF;
+    color: #FFF;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Merriweather;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.price {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+.dollar {
+    color: #000;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Merriweather;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 0;
+}
+.hymdral {
+    display: inline-flex;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    background: #ACF;
+    color: #1A75FF;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Merriweather;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+.undsendollar {
+    color: rgba(0, 0, 0, 0.32);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Merriweather;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: line-through;
+}
+.razmersongoh {
+    color: #000;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Merriweather;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.songolt {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.songolt p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    color: #000;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Merriweather;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+#m {
+    color: #FFF;
+    background-color: #000;
+}
+
