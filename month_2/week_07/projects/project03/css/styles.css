@@ -11,7 +11,6 @@ body {
     justify-content: center;
     background: #442686;
 }
-
 main {
     position: absolute;
     width: 1440px;
@@ -19,7 +18,6 @@ main {
     height: 1080px;
     background: #442686;
 }
-
 .screen1 {
     position: absolute;
     top: 237px;
@@ -30,7 +28,6 @@ main {
     background: #261351;
     box-shadow: 0px 4px 90px 0px rgba(0, 0, 0, 0.12);
 }
-
 .zuuwan {
     width: 360px;
     height: 388px;
@@ -38,7 +35,6 @@ main {
     background: url('../images/screen1.jpg') lightgray 50% / cover no-repeat;
     margin-bottom: 100px;
 }
-
 .trackyoursleep {
     color: #FFF;
     text-align: center;
@@ -48,7 +44,6 @@ main {
     font-weight: 800;
     line-height: normal;
 }
-
 .oguulber {
     color: #FFF;
     text-align: center;
@@ -86,7 +81,6 @@ main {
     background: #261351;
     box-shadow: 0px 4px 90px 0px rgba(0, 0, 0, 0.12);
 }
-
 .menu {
     position: absolute;
     top: 10px;
@@ -100,7 +94,6 @@ main {
     align-items: center;
     justify-content: center;
 }
-
 .fish {
     position: absolute;
     top: 24px;
@@ -114,10 +107,9 @@ main {
     align-items: center;
     justify-content: center;
 }
-
 .date {
     position: absolute;
-    top: 40px;
+    top: 98px;
     left: 91.5px;
     width: 177px;
     height: 50px;
@@ -125,4 +117,138 @@ main {
     align-items: center;
     justify-content: space-between;
 }
+.text h2{
+    color: #FFF;
+    text-align: center;
+    font-family: "League Spartan";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+}
+.text p {
+    color: rgba(255, 255, 255, 0.64);
+    text-align: center;
+    font-family: "League Spartan";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 4px;
+}
+.sleepscore {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 174px;
+    left: 85px;
+    width: 190px;
+    height: 190px;
+}
+.sleepscore .big {
+    position: absolute;
+}
 
+.sleepscore .small {
+    position: absolute;
+    stroke-width: 24px;
+    stroke: #FF19F6;
+    border-radius: 50%;
+}
+.s {
+    position: absolute;
+    width: 82px;
+    height: 82px;
+    border: 24px solid #FF19F6;
+    opacity: 0.4;
+    border-radius: 50%;
+}
+.sleepinfo {
+    position: absolute;
+    top: 428px;
+    left: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 328px;
+}
+.sleepinfo .one, .two{
+    width: 156px;
+    height: 105px;
+    border-radius: 8px; 
+    background: rgba(255, 255, 255, 0.08);
+}
+.sleepinfo h3 {
+    color: rgba(255, 255, 255, 0.40);
+    text-align: center;
+    font-family: "League Spartan";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.sleepinfo h4{
+    margin-top: 4px;
+    margin-bottom: 0;
+    margin-left: 10px;
+    color: #FFF;
+    text-align: start;
+    font-family: "League Spartan";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.sleepinfo span {
+    color: #FFF;
+    font-family: "League Spartan";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.head {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 136px;
+    height: 35px;
+    margin-left: 10px;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+.sleepinfo .last {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+}
+.sleepinfo h5 {
+    margin: 0;
+    margin-left: 5px;
+    color: #65FF61;
+    text-align: center;
+    font-family: "League Spartan";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.timelapse {
+    position: absolute;
+    width: 328px;
+    bottom: 90px;
+    height: 73px;
+    margin-left: 16px;
+}
+.l {
+    display: inline-flex;
+    gap: 4px;
+}
+.timelapse p {
+    margin: 0;
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+}
