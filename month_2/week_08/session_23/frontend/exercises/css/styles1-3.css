@@ -1,0 +1,18 @@
+ body {
+            font-size: 10vw;
+}
+@media (min-width: 1000px){
+    body {
+        background-color: red;
+        font-size: 10vw;
+    }
+}
+@media (min-width: 800px) and (max-width: 999px){
+    body {
+        background-color: yellow;
+        font-size: 10vw;
+    }
+}
+img {
+    width: 100vw;
+}

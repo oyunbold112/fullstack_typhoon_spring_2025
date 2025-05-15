@@ -1,0 +1,18 @@
+body {
+    display: flex;
+}
+.header{
+    background-color: green;
+}
+.content {
+    background-color: red;
+}
+.footer{
+    background-color: yellow;
+}
+
+@media (max-width: 700px){
+    body {
+        display: block;
+    }
+}

@@ -1,0 +1,15 @@
+body {
+    display: grid;
+    gap: 0px;
+    grid-template-columns: 200px 200px 200px 200px 200px;
+}
+div {
+    border: 5px solid black;
+}
+
+@media (max-width: 700px){
+    body {
+        grid-template-columns: 100% 100% 100% 100% 100%;
+    }
+}
+

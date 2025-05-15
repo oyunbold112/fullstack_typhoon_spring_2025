@@ -1,0 +1,9 @@
+body {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr;
+}
+img {
+    width: 50vw;
+    height: 50vh;
+}

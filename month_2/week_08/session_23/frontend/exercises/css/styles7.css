@@ -1,0 +1,28 @@
+body {
+    background-color: black;
+}
+h1 {
+    color: red;
+    margin-left: 10px;
+}
+span {
+    color: blue;
+}
+p {
+    margin-left: 10px;
+    color: blue;
+}
+@media (max-width: 600px) {
+    body {
+        background-color: white;
+    }
+    h1 {
+        color: blue;
+    }
+    span {
+        color: red;
+    }
+    p {
+        color: red;
+    }
+}
