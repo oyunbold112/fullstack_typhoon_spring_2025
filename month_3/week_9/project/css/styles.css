@@ -1,0 +1,126 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    max-width: 1440px;
+    height: 3174px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #d1ffdb;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    width: 1440px;
+    height: 85px;
+    padding: 7px 127px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    background: #FFF;
+    box-shadow: 0px 59px 16px 0px rgba(8, 128, 0, 0.00), 0px 38px 15px 0px rgba(8, 128, 0, 0.01), 0px 21px 13px 0px rgba(8, 128, 0, 0.02), 0px 9px 9px 0px rgba(8, 128, 0, 0.04), 0px 2px 5px 0px rgba(8, 128, 0, 0.04), 0px 0px 0px 0px rgba(8, 128, 0, 0.04);
+}
+
+.hero1 {
+    display: flex;
+    width: 1440px;
+    padding: 92px 127px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .nav {
+    display: flex;
+    width: 675px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.navbar .nav a {
+    color: #75C310;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.navbar .nav #home{
+    color: #000;
+}
+
+.navbar .nav .contact-button{
+    width: 149px;
+    height: 44.538px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: none;
+    background: #75C310;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.navbar header {
+    color: #75C310;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.navbar header span {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.hero1 .left {
+    width: 514px;
+    height: 513px;
+    flex-shrink: 0;
+}
+
+.hero .left h1 {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.hero .left p {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.hero1 .right {
+    width: 514px;
+    height: 513px;
+    flex-shrink: 0;
+}
