@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        The sum of <span id="num_one">4</span> and <span id="num_two"> 6 </span>is:
+    </p>
+    <p id="result"></p>
+    <script>
+        // write your code ot solve this exercise here!
+        let numberOne = document.getElementById('num_one')
+        let numberTwo = document.getElementById('num_two')
+        let result = document.getElementById('result')
+        result.textContent = parseInt(numberOne.textContent) + parseInt(numberTwo.textContent)
+        console.log(numberOne.textContent)
+    </script>
+    <script>
+        console.log(window);
+        
+    </script>
+</body>
+</html>
