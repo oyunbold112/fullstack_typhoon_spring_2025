@@ -1,197 +1,162 @@
--- session 32
+-- session_33
 
-select * from actor;
-
--- city
-
-select * from city;
-
--- country
-
-select * from country;
-
--- filter where clause
-
-select * from country where country = 'United States';
-
--- country id 93
-
-select * from country where country_id = 93;
-
--- actor_id  5
-
-select * from actor where actor_id = 5;
-
--- country id ni 93 city
-select * from city where country_id = 93;
-
--- india hotuud
-
-select * from city where country_id = 44;
-
--- JOIN
-
-
-join country co 
-on co.country_id = c.country_id;
-
-
-select c.city, co.country from city c
-join country co 
-on co.country_id = c.country_id;
-
--- Examples 
-create table basket_a (
-	a INT primary key,
-	fruit_a VARCHAR(100) not null
-);
-
-create table basket_b (
-  	b INT primary key,
-  	fruit_b VARCHAR(100) not null
-);
-
-insert into basket_a (a, fruit_a)
-values
-(1, 'Apple'),
-(2, 'Orange'),
-(3, 'Banana'),
-(4, 'Cucumber');
-
-insert into basket_b (b, fruit_b)
-values 
-(1, 'Orange'),
-(2, 'Apple'),
-(3, 'Watermelon'),
-(4, 'Pear');
-
-select * from basket_a ba;
-select * from basket_b b;
-
--- join buyu inner join
+-- aggregation function (Group by)
 
 select 
-	a,
-	fruit_a,
-	b,
-	fruit_b
+	-- distinct
+	customer_id
 from
-	basket_a
-inner join basket_b
- 	on fruit_a = fruit_b
-
--- left join
-select
-	a,
-	fruit_a,
-	b,
-	fruit_b
-from
-	basket_a
-left join basket_b
-	on fruit_a = fruit_b
+	payment;
+group by
+	customer_id
+order by
+	customer_id;
 	
--- left anti join
+-- aggregation function (SUM)
+
+select
+	customer_id,
+	SUM(amount) as summe
+from
+	payment 
+group by
+	customer_id
+order by
+	summe desc;
 	
-select
-	a,
-	fruit_a,
-	b,
-	fruit_b
-from
-	basket_a
-left join basket_b
-	on fruit_a = fruit_b
-where b is null;
-
--- 
-right join basket_b on fruit_a = fruit_b;
-
-
--- full outer join
-
-select 
-	a,
-	fruit_a,
-	b, 
-	fruit_b
-from
-	basket_a
-full outer join basket_b
- 	on fruit_a = fruit_b;
- 
-
-select 
-	a,
-	fruit_a,
-	b, 
-	fruit_b
-from
-	basket_a
-full join basket_b
- 	on fruit_a = fruit_b
-where a is null or b is null;
- 
-
-select * from customer
-select * from payment
--- Exercises
--- customer id, ner bolon ovgiig tolson payment amount bolon heddeh odor tolson be gedgiig ni buh datag haruulsan queryg bichne uu
-
+-- limit
+-- which customer paid the most?
 
 select
-	c.customer_id,
+	customer_id,
+	SUM(amount) as summe
+from
+	payment 
+group by
+	customer_id
+order by
+	summe desc;
+limit 1;
+
+-- join
+
+select
+	p.customer_id,
 	c.first_name,
 	c.last_name,
-	p.amount,
-	p.payment_date
+	SUM(amount) as summe
 from
-	customer c 
-	inner join payment p on p.customer_id = c.customer_id 
+	payment p
+left join
+	customer c
+on 
+	c.customer_id = p.customer_id
+group by
+	p.customer_id ,
+	c.first_name,
+	c.last_name
 order by
-	p.customer_id asc
+	summe desc
+limit 1;
 
--- Exercises
+-- count
+select count(*) from customer;
+
+-- count of payments
+
+select count(*) from payment;
+
+-- count of staff
+
+select count(*) from staff;
 
 select
-	c.customer_id,
-	c.first_name || '' || c.last_name customer_name,
-	s.first_name || '' || s.last_name staff_name,
-	p.amount,
-	p.payment_date
+	staff_id,
+	count(payment_id)
 from
-	customer c
-	inner join payment p using (customer_id)
-	inner join staff s using(staff_id)
+	payment
+group by
+	staff_id;
+
+
+-- payment-iig odor odriinh ni hemjeegeer ni haruulna uu
+
+select
+	payment_date::date payment_date,
+	sum(amount)
+from
+	payment
+group by
+	payment_date::date
 order by
-	payment_date;
+	payment_date desc;
+
+-- having 
+
+select
+	customer_id,
+	SUM(amount) as summe
+from
+	payment 
+group by
+	customer_id
+having
+	sum(amount) > 200
+order by
+	summe desc;
+
+-- customer id ni 300 gaas ih, store_id nii toog toolno uuu
+
+select
+	store_id,
+	count (customer_id)
+from
+	customer
+group by
+	store_id
+having
+	count(customer_id) > 300;
 
 
--- left join
--- film_id, film title, inventory_id-g ni haruulsan kinonii tile aar ni buurah
--- daraallaar haruulah query bichne uu.
+--- grouping sets
+
+drop table if exists sales;
+create table sales (
+	brand VARCHAR not null,
+	segment varchar not null,
+	quantity int not null,
+	primary key(brand, segment)
+);
+
+insert into sales (brand, segment, quantity)
+values
+	('ABC', 'Premium', 100),
+	('ABC', 'Basic', 200),
+	('XYZ', 'Premium', 100),
+	('XYZ', 'Basic', 300)
+returning *;
 
 select 
-	i.inventory_id,
-	i.film_id,
-	f.title
-from
-	inventory i
-	left join film f on i.film_id = f.film_id
-order by
-	i.inventory_id asc;
-
--- tuhain kino ni inventory_id ni null baigaa buh datag haruulna uu/ deerh shig
--- film_id, film title, inventory_id-g songoj haruulaarai
-select 
-	inventory.inventory_id,
-	film.film_id,
-	film.title
-from
-	film
-	left join inventory using(film_id)
-where inventory.inventory_id is null
-order by
-	film.title;
 	
--- 
+	segment,
+	sum (quantity)
+from
+	sales
+group by
+	segment;
+	
+-- solution
+
+select
+	brand,
+	segment,
+	sum (quantity)
+from
+	sales
+group by
+	grouping sets(
+		(brand, segment),
+		(brand),
+		(segment),
+		()
+	);
