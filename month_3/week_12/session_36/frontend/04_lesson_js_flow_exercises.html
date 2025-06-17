@@ -49,6 +49,40 @@
         } else { 
         console.log('Tawtai moril, [' + userName + ']'); 
         } 
+
+        // dasgal 6
+        too = 1
+        while (too <= 10) {
+            console.log(too)
+            too++;
+        }
+        // dasgal 7
+        for (let i = 10; i > 0; i--){
+            console.log(i)
+        }
+        // dasgal 8
+        for (let i = 0; i <= 20; i++) {
+            if (i % 2 == 0) {
+                console.log(i)
+            }
+        }
+         // dasgal 9
+         let n = 5
+         let niit = 1;
+         for (let i = 1; i <= 5; i++) {
+            niit *= i
+        }
+        console.log(niit)
+        // dasgal 10
+        let a = 5
+        let b = 10
+        let hariu = 0;
+        for (let i = a + 1; i < b; i++) {
+            hariu+= i
+        }
+        console.log(hariu)
+
+
         // dasgal 11
         dun = 99.9
         if (dun >= 90 && dun <= 100) {
@@ -63,6 +97,45 @@
         else if (dun <= 59) {
             console.log('F')
         }
+
+        // dasgal 12
+
+        let toonuud = [90, 91, 76, 70, 42]
+        let niilber = 0;
+        let huwaagch = 0
+        for (let i = 0; toonuud.length > i; i++) {
+            if (toonuud[i] > 50) {
+                niilber+=toonuud[i]
+                huwaagch++;
+            }
+        }
+        console.log(niilber / huwaagch)
+
+        // dasgal 13
+        let anhniitoo = 11
+        let mun = false
+        for (let i = 2; i < anhniitoo; i++) {
+            if (anhniitoo % anhniitoo === 0 && anhniitoo % 1 === 0) {
+                if (anhniitoo % i === 0) {
+                    console.log(`${anhniitoo} anhnii too bish`)
+                    mun = false
+                    break;
+                }
+                else {
+                    mun = true
+                }
+
+            }
+            else {
+                console.log(`${anhniitoo} anhnii too bish`);
+                break;
+            }
+        }
+        if (mun == true) {
+            console.log(`${anhniitoo} anhnii too mun`);
+        }
+
+
         // dasgal 14
         let name = 'Nomio'
         if (name === 'Sarnai') {
@@ -70,6 +143,49 @@
         }
         else {
             console.log('Sain uu, ['+ name +']')
+        }
+
+        // dasgal 15
+
+        // let fibonacci = 8
+        // let hariult = 0;
+        // function fibonnaci(number) {
+        //     if (number === 0) {
+        //         return 0;
+        //     }
+        //     if (number === 1) {
+        //         return 1;
+        //     }
+
+        //     return fibonacci(number - 1) + fibonacci(number - 2);
+        // }
+        // for (let i = 0; i < 10; i++) {
+        //     console.log(fibonacci(i))
+        //}
+
+        function fibonacciLoop (number) {
+            let fibN1 = 0;
+            let fibN2 = 1;
+            let fibN;
+            let counter = 2;
+            if (number === 0) {
+                return fibN1;
+            } else if (number === 1) {
+                return fibN2
+            } else {
+                while (counter <= number) {
+                    fibN = fibN + fibN2;
+                    fibN1 = fibN2;
+                    fibN2 = fibN;
+                    counter++;
+                }
+                return fibN2;
+            }
+        } 
+        console.log('fibonacci while loop')
+        // fibonacciLoop(5)
+        for (let i = 0; i < 10; i++) {
+            console.log(fibonacciLoop(i))
         }
     </script>
 </body>

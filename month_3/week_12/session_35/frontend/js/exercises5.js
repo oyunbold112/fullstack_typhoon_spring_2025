@@ -29,10 +29,17 @@ function reverse3 (a) {
 
 console.log(reverse3(123))
 
-function checkPalindrome() {
-    //
-    
+function checkPalindrome(input) {
+    console.log(input)
+    console.log(input.length)
+    let reverseInput = ''
+    for(let i = input.length - 1; i >= 0; i--) {
+        reverseInput += input[i]
+    }
+    console.log(reverseInput == input)
 }
+
+console.log(`Is it palindrom: ${checkPalindrome('aba')}`)
 
 function savingsInterest (ehniiUldegdel, interest, duration) {
     return ehniiUldegdel * interest * duration
@@ -54,26 +61,45 @@ randomNum()
 
 // recursive function
 
-function factorial (a) {
-    if (number == 0) {
-        return 1
-    } else if (number === 1) {
-        return 1
-    } else {
-        return number * factorial(number - 1);
+// function factorial (a) {
+//     if (number == 0) {
+//         return 1
+//     } else if (number === 1) {
+//         return 1
+//     } else {
+//         return number * factorial(number - 1);
+//     }
+// }
+// document.write('Factorial of : ' + factorial(5))
+
+
+console.log('egshig tool')
+function countVowel (word) {
+    // 
+    let count = 0;
+    for (let i = 0; i < word.length; i++) {
+        if ('a' == word[i] || 'e' == word[i] || 'o' == word[i] || 'i' == word[i] || 'u' == word[i]) {
+            count++
+        }
     }
+    return count;
 }
 
-document.
-document.write('Factorial of : ' + factorial(5))
+console.log(countVowel('aeiou'))
 
-function countVowel () {
-    //
+function primeNumber (number) {
+    if (1 >= number) {
+        return false
+    }
+    for (let i = 2; i < number; i++) {
+        if (number % i == 0) {
+            return false
+        }
+    }
+    return true;
 }
 
-function primeNumber () {
-    //
-}
+console.log(`the number is prime ${primeNumber(7)}`)
 
 
 
