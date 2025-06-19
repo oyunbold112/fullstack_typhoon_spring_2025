@@ -1,0 +1,112 @@
+@font-face {
+    font-family: MuseoModerno;
+    src: url('../fonts/MuseoModerno-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSans3-Regular.ttf');
+}
+
+body {
+    height: 4089px;
+}
+
+#navbar {
+    display: flex;
+    width: 1920px;
+    height: 72px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.brand h2 {
+    color: #251805;
+    font-family: MuseoModerno;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.mid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+}
+
+.mid p {
+    display: flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    color: #432818;
+    font-family: "Source Sans Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 24px */
+}
+
+.nav-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-right p {
+    display: flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    color: #432818;
+    font-family: "Source Sans Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 24px */
+}
+
+.nav-right .login {
+    border-radius: 8px;
+    background: #583101;
+    color: #EDE0D4;
+}
+
+.nav-container {
+    display: flex;
+    width: 1320px;
+    padding: 16px 12px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#hero-section {
+    display: flex;
+    width: 1920px;
+    height: 952px;
+    padding: 32px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.hero-container {
+    display: flex;
+    width: 1320px;
+    padding: 16px 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+}
+

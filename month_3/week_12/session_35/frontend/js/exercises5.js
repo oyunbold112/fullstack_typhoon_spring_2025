@@ -101,5 +101,3 @@ function primeNumber (number) {
 
 console.log(`the number is prime ${primeNumber(7)}`)
 
-
-
