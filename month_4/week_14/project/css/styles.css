@@ -32,7 +32,6 @@ body {
 }
 
 .screen h1 {
-    color: var(--white, #FFF);
     text-align: center;
     font-family: Inter;
     font-size: 23px;
@@ -48,7 +47,6 @@ body {
     align-items: center;
     gap: 32px;
     border-radius: 32px;
-    background: var(--Calcucator---Surface, #262831);
     /* box-shadow */
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
 }
@@ -59,7 +57,6 @@ body {
     align-items: center;
 }
 .screen .firstnum {
-    color: var(--white-60-opacity, rgba(255, 255, 255, 0.60));
     text-align: right;
     font-family: Inter;
     font-size: 33px;
@@ -78,10 +75,7 @@ body {
     width: 24px;
     height: 24px;
 }
-
-
 .screen .secondnum {
-    color: var(--white, #FFF);
     text-align: right;
     /* Inter - Headline Large */
     font-family: Inter;
@@ -98,7 +92,7 @@ body {
     height: 488px;
     flex-shrink: 0;
     border-radius: 24px;
-    background: var(--Calcucator---Surface, #262831);
+    
     padding: 32px;
     padding-left: 0;
     padding-top: 24px;
@@ -166,8 +160,54 @@ button img {
     transform: translateY(3px);
 }
 
+svg {
+    fill: white;
+}
+
+button.too h1 {
+    text-align: center;
+    font-family: Inter;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 52.8px; /* 160% */
+    letter-spacing: 0.25px;
+    position: absolute;
+    transform: translateY(-10px);
+}
+
+.light {
+    background-color: #eee;
+    color: #212121;
+}
+
+.light-keyboard {
+    background: #FAFAFA
+}
+
+.light-theme-buttons {
+    background: #FFF;
+}
 
 
 
+/* dark theme colors */
+/* keyboard background: var(--Calcucator---Surface, #262831); */
+/* theme background: var(--Calcucator---Surface, #262831); */
+/* firstnum     color: var(--white-60-opacity, rgba(255, 255, 255, 0.60));
+ */
+/* second num  */
 
+.dark {
+    background: var(--Calcucator---Background, #202128);
+    color: #FFF;
+}
+
+.dark-keyboard {
+    background: var(--Calcucator---Surface, #262831);
+}
+
+.dark-theme-buttons {   
+    background: var(--Calcucator---Surface, #262831);
+}
 

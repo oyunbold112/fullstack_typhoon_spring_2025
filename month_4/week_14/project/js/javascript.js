@@ -1,4 +1,4 @@
-let toonuud = document.getElementsByClassName('white')
+let toonuud = document.getElementsByClassName('too')
 let ulaanoperatoruud = document.getElementsByClassName('red')
 let tsenher_operatoruud = document.getElementsByClassName('blue')
 let first = document.getElementById('first')
@@ -6,6 +6,11 @@ let second = document.getElementById('second')
 let second_utga = 0
 let first_utga = 0
 let uildel = ''
+
+window.addEventListener('DOMContentLoaded', function(){
+    setTheme()
+})
+
 for (let i = 0; i < toonuud.length; i++) {
     toonuud[i].addEventListener('click', function(){
         second.innerHTML += this.children[1].innerHTML
@@ -132,3 +137,78 @@ tentsuu.addEventListener('click', function(){
         console.log(second_utga)
     }
 })
+
+let themeButtons = document.getElementById('theme')
+
+for (let i = 0; i < themeButtons.children.length; i++) {
+    console.log(themeButtons.children[i])
+    themeButtons.children[i].addEventListener('click', function(){
+        if (this.id === 'dark') {
+            localStorage.setItem('theme', 'dark')
+        }
+        else {
+            localStorage.setItem('theme', 'light')
+        }
+        setTheme()
+    })
+    
+}
+
+function setTheme () {
+    if (localStorage.theme === 'light') {
+        console.log('working')
+        let container = document.getElementById('container')
+        let header = document.getElementsByClassName('header')
+        let keyboard = document.getElementsByClassName('keyboard')
+        let theme = document.getElementsByClassName('theme')
+        let first = document.getElementById('first')
+        let second = document.getElementById('second')
+        let teg = document.getElementById('teg')
+        teg.children[0].setAttribute('src', './imgs/Rectangle 4 (2).svg')
+        first.classList.add('light')
+        second.classList.add('light')
+        theme[0].classList.add('light-theme-buttons')
+        theme[0].children[0].setAttribute('src', './imgs/dark-mode-not-active.svg')
+        theme[0].children[1].setAttribute('src', './imgs/light-mode-icon (1).svg')
+        keyboard[0].classList.add('light-keyboard')
+        header[0].children[0].classList.add('light')
+        container.classList.add('light')
+        let numbers = document.getElementsByClassName('too')
+        for (let i = 0; i < numbers.length; i++) {
+            numbers[i].classList.add('light')
+        }
+        let svgs = document.getElementsByTagName('svg')
+        for (let i = 0; i < svgs.length; i++) {
+            console.log(svgs[i].children[0].children[0])
+            svgs[i].children[0].children[0].setAttribute('fill', 'white')
+        }
+    }
+    else {
+        console.log('working')
+        let container = document.getElementById('container')
+        let header = document.getElementsByClassName('header')
+        let keyboard = document.getElementsByClassName('keyboard')
+        let theme = document.getElementsByClassName('theme')
+        let first = document.getElementById('first')
+        let second = document.getElementById('second')
+        let teg = document.getElementById('teg')
+        teg.children[0].setAttribute('src', './imgs/Rectangle 4 (1).svg')
+        first.classList.add('dark')
+        second.classList.add('dark')
+        theme[0].classList.add('dark-theme-buttons')
+        theme[0].children[0].setAttribute('src', './imgs/dark-mode-icon.svg')
+        theme[0].children[1].setAttribute('src', './imgs/light-mode-icon.svg')
+        keyboard[0].classList.add('dark-keyboard')
+        header[0].children[0].classList.add('dark')
+        container.classList.add('dark')
+        let numbers = document.getElementsByClassName('too')
+        for (let i = 0; i < numbers.length; i++) {
+            numbers[i].classList.add('dark')
+        }
+        let svgs = document.getElementsByTagName('svg')
+        for (let i = 0; i < svgs.length; i++) {
+            console.log(svgs[i].children[0].children[0])
+            svgs[i].children[0].children[0].setAttribute('fill', '#2B2D35')
+        }
+    }
+}

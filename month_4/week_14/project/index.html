@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <div class="calculator-container">
+    <div id="container" class="calculator-container">
         <div class="screen">
             <div class="header">
                 <h1>Calc</h1>
-                <div class="theme">
-                    <img src="./imgs/dark-mode-icon.svg" alt="">
-                    <img src="./imgs/light-mode-icon.svg" alt="">
+                <div id="theme" class="theme">
+                    <img id="dark" src="./imgs/dark-mode-icon.svg" alt="">
+                    <img id="light" src="./imgs/light-mode-icon.svg" alt="">
                 </div>
             </div>
             <p id="first" class="firstnum"><span class="operator"></span></p>
@@ -21,7 +21,7 @@
         </div>
         <div class="keyboard">
             <button id="ac" class="blue">
-               <svg xmlns="http://www.w3.org/2000/svg" width="154" height="112" viewBox="0 0 154 112" fill="none">
+               <svg xmlns="http://www.w3.org/2000/svg" width="154" height="112" viewBox="0 0 154 112" fill="white">
                 <g filter="url(#filter0_d_101_63)">
                     <rect x="22" y="12" width="110" height="68" rx="6" fill="#2B2D35" stroke="url(#paint0_radial_101_63)" stroke-width="4"/>
                 </g>
@@ -116,7 +116,7 @@
                 </svg>
                 <img class="icon" src="./imgs/division-icon.svg" alt="">
             </button>
-            <button id="doloo" class="white">
+            <button id="doloo" class="too">
                 <svg xmlns="http://www.w3.org/2000/svg" width="154" height="112" viewBox="0 0 154 112" fill="none">
                 <g filter="url(#filter0_d_101_63)">
                     <rect x="22" y="12" width="110" height="68" rx="6" fill="#2B2D35" stroke="url(#paint0_radial_101_63)" stroke-width="4"/>
@@ -140,7 +140,7 @@
                 </svg>
                 <h1>7</h1>
             </button>
-            <button id="doloo" class="white">
+            <button id="doloo" class="too">
                 <svg xmlns="http://www.w3.org/2000/svg" width="154" height="112" viewBox="0 0 154 112" fill="none">
                 <g filter="url(#filter0_d_101_63)">
                     <rect x="22" y="12" width="110" height="68" rx="6" fill="#2B2D35" stroke="url(#paint0_radial_101_63)" stroke-width="4"/>
@@ -164,7 +164,7 @@
                 </svg>
                 <h1>8</h1>
             </button>
-            <button id="doloo" class="white">
+            <button id="doloo" class="too">
                 <svg xmlns="http://www.w3.org/2000/svg" width="154" height="112" viewBox="0 0 154 112" fill="none">
                 <g filter="url(#filter0_d_101_63)">
                     <rect x="22" y="12" width="110" height="68" rx="6" fill="#2B2D35" stroke="url(#paint0_radial_101_63)" stroke-width="4"/>
@@ -212,7 +212,7 @@
                 </svg>
                 <img src="./imgs/multiplication-icon.svg" alt="" class="icon">
             </button>
-            <button id="doloo" class="white">
+            <button id="doloo" class="too">
                 <svg xmlns="http://www.w3.org/2000/svg" width="154" height="112" viewBox="0 0 154 112" fill="none">
                 <g filter="url(#filter0_d_101_63)">
                     <rect x="22" y="12" width="110" height="68" rx="6" fill="#2B2D35" stroke="url(#paint0_radial_101_63)" stroke-width="4"/>
@@ -236,7 +236,7 @@
                 </svg>
                 <h1>4</h1>
             </button>
-            <button id="doloo" class="white">
+            <button id="doloo" class="too">
                 <svg xmlns="http://www.w3.org/2000/svg" width="154" height="112" viewBox="0 0 154 112" fill="none">
                 <g filter="url(#filter0_d_101_63)">
                     <rect x="22" y="12" width="110" height="68" rx="6" fill="#2B2D35" stroke="url(#paint0_radial_101_63)" stroke-width="4"/>
@@ -260,7 +260,7 @@
                 </svg>
                 <h1>5</h1>
             </button>
-            <button id="doloo" class="white">
+            <button id="doloo" class="too">
                 <svg xmlns="http://www.w3.org/2000/svg" width="154" height="112" viewBox="0 0 154 112" fill="none">
                 <g filter="url(#filter0_d_101_63)">
                     <rect x="22" y="12" width="110" height="68" rx="6" fill="#2B2D35" stroke="url(#paint0_radial_101_63)" stroke-width="4"/>
@@ -308,7 +308,7 @@
                 </svg>
                 <img src="./imgs/subtraction-icon.svg" alt="" class="icon">
             </button>
-            <button id="doloo" class="white">
+            <button id="doloo" class="too">
                 <svg xmlns="http://www.w3.org/2000/svg" width="154" height="112" viewBox="0 0 154 112" fill="none">
                 <g filter="url(#filter0_d_101_63)">
                     <rect x="22" y="12" width="110" height="68" rx="6" fill="#2B2D35" stroke="url(#paint0_radial_101_63)" stroke-width="4"/>
@@ -332,7 +332,7 @@
                 </svg>
                 <h1>1</h1>
             </button>
-            <button id="doloo" class="white">
+            <button id="doloo" class="too">
                 <svg xmlns="http://www.w3.org/2000/svg" width="154" height="112" viewBox="0 0 154 112" fill="none">
                 <g filter="url(#filter0_d_101_63)">
                     <rect x="22" y="12" width="110" height="68" rx="6" fill="#2B2D35" stroke="url(#paint0_radial_101_63)" stroke-width="4"/>
@@ -355,7 +355,7 @@
                 </defs>
                 </svg>
                 <h1>2</h1></button>
-            <button id="doloo" class="white">
+            <button id="doloo" class="too">
                 <svg xmlns="http://www.w3.org/2000/svg" width="154" height="112" viewBox="0 0 154 112" fill="none">
                 <g filter="url(#filter0_d_101_63)">
                     <rect x="22" y="12" width="110" height="68" rx="6" fill="#2B2D35" stroke="url(#paint0_radial_101_63)" stroke-width="4"/>
@@ -402,10 +402,10 @@
                 </svg>
                 <img src="./imgs/add-icon.svg" alt="" class="icon">
             </button>
-            <button id="teg" class="white">
+            <button id="teg" class="too">
                 <img src="./imgs/Rectangle 4 (1).svg" alt="">
                 <h1>0</h1></button>
-            <button id="doloo" class="white">
+            <button id="doloo" class="too">
                 <svg xmlns="http://www.w3.org/2000/svg" width="154" height="112" viewBox="0 0 154 112" fill="none">
                 <g filter="url(#filter0_d_101_63)">
                     <rect x="22" y="12" width="110" height="68" rx="6" fill="#2B2D35" stroke="url(#paint0_radial_101_63)" stroke-width="4"/>
