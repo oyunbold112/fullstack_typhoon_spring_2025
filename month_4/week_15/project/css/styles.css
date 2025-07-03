@@ -1,0 +1,107 @@
+* {
+    margin: auto;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url('../fonts/Roboto-VariableFont_wdth\,wght.ttf');
+}
+
+@font-face {
+    font-family: Inter;
+    src: url('../fonts/Inter-VariableFont_opsz\,wght.ttf');
+}
+
+main {
+    width: 1440px;
+    min-height: 720px;
+    padding: 0px 240px 100px 240px;
+    background: #9CD4FA;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-posts-container {
+    display: flex;
+    padding: 12px;
+    align-items: flex-start;
+    align-self: stretch;
+    width: 776px;
+    border-radius: 16px;
+    background: #FFF;
+    color: #757575;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 40px;
+    border: none;
+}
+
+.h1 {
+    color: #171830;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.post {
+    position: relative;
+    width: 740px;
+    padding: 20px 20px 20px 40px;
+    align-items: flex-start;
+    border-radius: 16px;
+    background: #EEF7FC;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.30);
+    margin-bottom: 40px;
+}
+
+.post h2 {
+    position: absolute;
+    left: -15px;
+    top: -15px;
+    display: flex;
+    padding: 11px 15.22px 11px 15.78px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: #5DA7E1;
+    color: #EEF7FC;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.post h1 {
+    color: #171830;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 14px;
+}
+.post h1::first-letter{
+    text-transform: capitalize;
+}
+
+.post p {
+    color: #171830;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20.8px; /* 130% */
+}
+
+.post p::first-letter{
+    text-transform: capitalize;
+}
+
