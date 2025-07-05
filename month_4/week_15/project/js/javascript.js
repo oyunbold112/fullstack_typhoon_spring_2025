@@ -5,8 +5,8 @@ const postPromise = fetch(POST_API);
 const mainElements = document.getElementsByTagName('main')
 const searchElement = document.getElementById('search')
 const postsTitleArray = []
-let postData = undefined
 const postsElement = document.getElementById('posts')
+let postData = []
 
 postPromise
     .then((response) => {
@@ -29,11 +29,10 @@ postPromise
             div.appendChild(bodyElement)
             postsElement.appendChild(div)
             postsTitleArray.push(data[i].title)
+            postData.push({title: data[i].title, body: data[i].body, id: data[i].id})
         }
-        postData = data
         console.log(postData)
-        console.log(postData)
-        console.log(postData)
+        
     })
 
 searchElement.addEventListener('keydown', function(){
@@ -42,22 +41,17 @@ searchElement.addEventListener('keydown', function(){
     posts.innerHTML = ''
     posts.style = 'position: absolute;'
     let value = this.value
-    console.log(value)
-    const Result = postsTitleArray.filter((t) => t.includes(value))
-    console.log(Result)
+    const result = postsTitleArray.filter((t) => t.includes(value))
 
     for (let i = 0; i < postData.length; i++) {
-        for (let a = 0; i < postsTitleArray; a++) {
-            if (postData[i].title = postsTitleArray[a]) {
-                console.log(postData[i].title)
-                console.log(postsTitleArray[a])
+        for (let a = 0; a < result.length; a++) {
+            if (postData[i].title == result[a]) {
                 resultData.push(postData[i])
+                break;
             }
         }
     }
     posts.style = 'position: relative;'
-    resultData.push('hi')
-    console.log(resultData)
     for (let i = 0; i < resultData.length; i++) {
             let div = document.createElement('div')
             div.classList.add('post')
