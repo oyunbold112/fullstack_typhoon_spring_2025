@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "hi-test-c9243-7726b",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

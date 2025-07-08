@@ -1,0 +1,1 @@
+```firebase deploy --only hosting:week12-project```
