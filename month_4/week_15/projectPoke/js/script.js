@@ -11,6 +11,8 @@ fetch(POKEMON_URL)
         const sectionElement = document.createElement('section')
         console.log(pokemons)
         for ( let i = 0; i < pokemons.length; i++) {
+            let count = i
+            console.log(count)
             const pokemonDetailContainer = document.createElement('div')
             pokemonDetailContainer.classList.add('pokemon-detail-container');
             console.log(pokemons[i])
@@ -35,6 +37,7 @@ fetch(POKEMON_URL)
             .then((response) => response.json())
             .then((data) => {
                 console.log(data)
+               
                 // pokemon id
                 const pokemonIdElement = document.createElement('p')
                 const pokemon_id = data.id
@@ -60,6 +63,74 @@ fetch(POKEMON_URL)
                 imgElement.src = pokemonImageUrl;
                 imgElement.classList.add('pokemon-pic')
                 pokemonDetailContainer.appendChild(imgElement)
+                // Pokemon types (water, fire, grass, flying, poison, normal, rock, ground, fighting, ghost,, psychic, ice, dragon, dark, fairy, electric, steel etc)
+                const typesElement = document.createElement('div')
+                typesElement.classList.add('types-container')
+                const typeList = data['types'][0].type
+                console.log(typeList)
+
+                document.writeln(typesElement)
+                let backgroundColorByType = undefined
+                switch (typeList[0]) {
+                    case 'fire':
+                        backgroundColorByType = '#eb6c6c';
+                        break;
+                    case 'water':
+                        backgroundColorByType = '#009ACB';
+                        break;
+                    case 'grass':
+                        backgroundColorByType = '#';
+                        break;
+                    case 'electric':
+                        backgroundColorByType = '#';
+                        break;
+                    case 'normal':
+                        backgroundColorByType = '##B6B6B6';
+                        break;
+                    case 'poison':
+                        backgroundColorByType = '#7E00CB';
+                        break;
+                    case 'ground':
+                        backgroundColorByType = '#';
+                        break;
+                    case 'flying':
+                        backgroundColorByType = '#2299EE';
+                        break;
+                    case 'bug':
+                        backgroundColorByType = '#91AC22';
+                        break;
+                    case 'rock':
+                        backgroundColorByType = '#';
+                        break;
+                    case 'ghost':
+                        backgroundColorByType = '#';
+                        break;
+                    case 'psychic':
+                        backgroundColorByType = '#';
+                        break;
+                    case 'ice':
+                        backgroundColorByType = '#';
+                        break;
+                    case 'dragon':
+                        backgroundColorByType = '#';
+                        break;
+                    case 'dark':
+                        backgroundColorByType = '#';
+                        break;
+                    case 'fairy':
+                        backgroundColorByType = '#';
+                        break;
+                    case 'steel':
+                        backgroundColorByType = '#';
+                        break;
+                    default:
+                        break;
+                }
+                 for (let i = 0; typeList.length; i++) {
+                    const typesElement = document.createElement('p')
+                    typesElement.innerHTML = typeList[i]
+                }
+                pokemonDetailContainer.style = `background: ${backgroundColorByType}`
             })
             .catch((error) => {
                 console.log(error)
