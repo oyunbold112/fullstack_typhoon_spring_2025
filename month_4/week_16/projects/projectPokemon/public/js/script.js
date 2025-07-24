@@ -7,7 +7,7 @@ console.log(mainElements)
 fetch(POKEMON_URL)
     .then((response) => response.json())
     .then((data) => {
-        const pokemons = data.results
+        const pokemons = data.results;
         globalData = pokemons;
         console.log('global dataa')
         console.log(globalData)
@@ -40,8 +40,8 @@ fetch(POKEMON_URL)
             fetch(pokemonDetailUrl)
             .then((response) => response.json())
             .then((data) => {
+                console.log('data shu')
                 console.log(data)
-               
                 // pokemon id
                 const pokemonIdElement = document.createElement('p')
                 const pokemon_id = data.id
@@ -134,6 +134,7 @@ fetch(POKEMON_URL)
                     default:
                         break;
                 }
+                pokemonDetailContainer.addEventListener('click', () => showModal(data, backgroundColorByType));
                 // types of pokemon
                  for (let i = 0; i < typeList.length; i++) {
                     const typeElement = document.createElement('p')
@@ -457,7 +458,6 @@ fetch(POKEMON_URL)
                 console.log(typesElement)
                 console.log(backgroundColorByType)
                 pokemonDetailContainer.style = `background: ${backgroundColorByType}`
-                
             })
             .catch((error) => {
                 console.log(error)
@@ -983,9 +983,23 @@ searchInput.addEventListener('keyup', (e) => {
     }
 })
 
-
-
-
+function showModal(data, bgcolor) {
+    const modal = document.getElementById('pokemon-modal')
+    const modalContent = document.getElementById('modal-content')
+    const modalImage = document.getElementById('modal-img')
+    const modalTitle = document.getElementById('modal-title')
+    const modalAbout = document.getElementById('modal-about');
+    
+    modalImage.src = data.sprites.other['official-artwork'].front_default;
+    modal.style.display = 'block';
+    modalContent.style = `background-color: ${bgcolor}`
+    modalTitle.style = `color: ${bgcolor}`
+    window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+        }
+    });
+}
 
 
 
