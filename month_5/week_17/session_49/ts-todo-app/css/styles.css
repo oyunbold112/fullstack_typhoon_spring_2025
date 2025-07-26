@@ -1,0 +1,37 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-item {
+    background: #fff;
+    padding: 10px;
+    border-bottom: 1px #ccc dotted;
+}
+
+li {
+    position: relative;
+}
+
+.todo-item .checkbox {
+    position: absolute;
+    top: 5px;
+    right: 55px;
+    width: 20px;
+    height: 20px;
+}
+.todo-item .delete {
+    position: absolute;
+    right: 10px;
+    width: 40px;
+    height: 15px;
+    background-color: red;
+    font-size: 10px;
+    border-radius: 5px;
+    border: none;
+}
