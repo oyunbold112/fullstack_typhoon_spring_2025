@@ -26,7 +26,7 @@ fetch(POKEMON_URL)
 
       // pokemon detail url
       const pokemonDetailUrl = pokemons[i].url;
-      console.log(pokemonDetailUrl);
+      
       pokemonDetailContainer.appendChild(nameElement);
       sectionElement.appendChild(pokemonDetailContainer);
       // Corner svg
@@ -37,6 +37,9 @@ fetch(POKEMON_URL)
       fetch(pokemonDetailUrl)
         .then((response) => response.json())
         .then((data) => {
+          if (data.name === 'charmeleon') {
+            console.log(pokemonDetailUrl)
+          }
           console.log("data shu");
           console.log(data);
           // pokemon id
@@ -988,9 +991,10 @@ function showModal(data, bgcolor) {
   const modalImage = document.getElementById("modal-img");
   const modalTitle = document.getElementById("modal-title");
   const modalAbout = document.getElementById("modal-about");
-  const modalTitleShadow = document.getElementById('modal-title-shadow');
+  const modalTitleShadow = document.createElement('div');
   const modalDetailsTypes = document.getElementById("modal-detail-types");
   const modalDetails = document.querySelector(".detail");
+  const modalCloseButton = document.getElementById('closebutton');
   modalDetailsTypes.innerHTML = "";
   modalImage.src = data.sprites.other["official-artwork"].front_default;
   modal.style.display = "block";
@@ -998,6 +1002,10 @@ function showModal(data, bgcolor) {
   modalTitleShadow.style = `background-color: ${bgcolor}`;
   modalTitle.innerHTML = data.name;
   modalTitle.style = `color: ${bgcolor}`;
+  modalTitle.appendChild(modalTitleShadow);
+  modalTitle.children[0].classList.add("modal-title-shadow");
+
+
   const pokemon_id = data.id;
   let string_id = pokemon_id.toString();
   if (string_id.length == 1) {
@@ -1007,6 +1015,7 @@ function showModal(data, bgcolor) {
   } else {
     string_id = `#${string_id}`;
   }
+  console.log(data.name)
   console.log(modalDetails.children[0].innerHTML = string_id);
   modalDetails.children[1].innerHTML = data.name;
   modalDetails.children[1].style = 'text-transform: capitalize;';
@@ -1015,6 +1024,10 @@ function showModal(data, bgcolor) {
       modal.style.display = "none";
     }
   });
+  modalCloseButton.addEventListener("click", (e) => {
+    modal.style.display = "none";
+  });
+
   const typesElement = document.createElement("div");
   typesElement.classList.add("types-container");
   const typeList = data["types"];
@@ -1342,4 +1355,11 @@ function showModal(data, bgcolor) {
   if (modalDetailsTypes.children.length === 0) {
     modalDetailsTypes.appendChild(typesElement);
   }
+  const modalaboutinfo = data.about
+  const modalpokemonheight = data.height
+  const modalpokemonweight = data.weight
+  const modalpokemonspecies = data.species.name
 }
+
+
+/* show modal => import elements, style the modal,  */
