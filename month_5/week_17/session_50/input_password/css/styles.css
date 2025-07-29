@@ -1,0 +1,23 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    margin-right: 5px;
+    border: 1px solid  rgb(61, 117, 229);
+    border-radius: 3px;
+}
+button {
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(87, 217, 39);
+    color: white;
+    height: 20px;
+    width: 70px;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+}
