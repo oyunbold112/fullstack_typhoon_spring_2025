@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar";
 import HeroOne from "./components/HeroOne";
 import HeroTwo from "./components/HeroTwo";
 import HeroThree from "./components/HeroThree";
+import HeroFour from "./components/HeroFour";
+import Footer from "./components/footer";
 
 const App: React.FC = () => {
   return (
@@ -13,6 +15,8 @@ const App: React.FC = () => {
         <HeroOne/>
         <HeroTwo/>
         <HeroThree/>
+        <HeroFour/>
+        <Footer/>
       </div>
     </>
   );
