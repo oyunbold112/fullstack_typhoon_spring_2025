@@ -321,7 +321,7 @@
   line-height: normal;
 }
 
-/* .food-category-container .more-category-button {
+/*
   
 } */
 
@@ -384,9 +384,8 @@
 @media screen and (max-width: 768px) {
   #root {
     position: relative;
-    height: 1473.59px;
     max-width: 336px;
-    overflow: hidden;
+    overflow: scroll;
     padding: 20px 12px;
     background: var(
       --Background-Gradient,
@@ -417,6 +416,26 @@
     height: 28px;
     flex-shrink: 0;
   }
+
+  .cart-button {
+    margin: 0;
+    margin-left: 20px;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .location {
+    display: flex;
+    gap: 8px;
+    width: 159px;
+    height: 21px;
+    flex-shrink: 0;
+    padding: 0;
+  }
   .signin {
     display: none;
   }
@@ -425,10 +444,9 @@
     display: none;
   }
   .header-container {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
     height: 36px;
-    width: 360px;
+    width: 336px;
     display: flex;
     align-items: center;
   }
@@ -447,5 +465,71 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .header-container .menu {
+    padding: 4px;
+    margin-left: 8px;
+  }
+
+   .food-category-container section {
+    display: none;
+  }
+
+  .big-white-container {
+    width: 320px;
+    height: 1275px;
+    overflow: hidden;
+    padding: 12px 8px;
+  }
+
+  .big-white-container .right .search {
+    width: 268px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+
+  .big-white-container .right .filter {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    border-radius: 999px;
+    background: var(--Blue-Gray, #E3E8EB);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+  }
+
+  .big-white-container .right .food {
+    width: 319.501px;
+    height: 209px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: start;
+ 
+  }
+  .big-white-container .right .food img {
+    width: 320px;
+    height: 114px;
+    transform: scaleX(1.82);
+    border-radius: 0px;
+  }
+  .big-white-container .right .food .text-container {
+    width: 320px;
+    height: 115px;
+    flex-shrink: 0;
+    background-color: #fff;
+    z-index: 1000;
+    position: absolute;
+    bottom: 0;
+    border-bottom-left-radius: 999px;
+    border-bottom-right-radius: 999px;
+  }
+
+  .big-white-container .right .food .text {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
   }
 }

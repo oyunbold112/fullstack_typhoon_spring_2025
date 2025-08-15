@@ -1,43 +1,45 @@
 import React from "react";
-import firstimage from '../assets/Rectangle 31.svg';
-import secondimage from '../assets/image.svg';
-import third from '../assets/image (1).svg';
-import fourth from '../assets/Rectangle 31 copy.svg';
-import fifth from '../assets/Rectangle 31 (1).svg';
+import firstimage from "../assets/Rectangle 31.svg";
+import secondimage from "../assets/image.svg";
+import third from "../assets/image (1).svg";
+import fourth from "../assets/Rectangle 31 copy.svg";
+import fifth from "../assets/Rectangle 31 (1).svg";
 
 const SearchAndResult: React.FC = () => {
   return (
     <>
       <div className="big-white-container">
-        <div className="left">
-          <p className="open-now">
-            Open now
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="34"
-              height="18"
-              viewBox="0 0 34 18"
-              fill="none"
-            >
-              <rect width="34" height="18" rx="9" fill="#D9D9D9" />
-              <circle cx="9" cy="9" r="7" fill="#9E9E9E" />
-            </svg>
-          </p>
-          <p className="free-delivery">
-            Free delivery
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="34"
-              height="18"
-              viewBox="0 0 34 18"
-              fill="none"
-            >
-              <rect width="34" height="18" rx="9" fill="#D9D9D9" />
-              <circle cx="9" cy="9" r="7" fill="#9E9E9E" />
-            </svg>
-          </p>
-          <p className="rating">Rating</p>
-        </div>
+        {window.innerWidth > 700 && (
+          <div className="left">
+            <p className="open-now">
+              Open now
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="34"
+                height="18"
+                viewBox="0 0 34 18"
+                fill="none"
+              >
+                <rect width="34" height="18" rx="9" fill="#D9D9D9" />
+                <circle cx="9" cy="9" r="7" fill="#9E9E9E" />
+              </svg>
+            </p>
+            <p className="free-delivery">
+              Free delivery
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="34"
+                height="18"
+                viewBox="0 0 34 18"
+                fill="none"
+              >
+                <rect width="34" height="18" rx="9" fill="#D9D9D9" />
+                <circle cx="9" cy="9" r="7" fill="#9E9E9E" />
+              </svg>
+            </p>
+            <p className="rating">Rating</p>
+          </div>
+        )}
         <div className="right">
           <div className="right-top">
             <svg
@@ -60,31 +62,49 @@ const SearchAndResult: React.FC = () => {
               placeholder="What you want to eat today?"
               className="search"
             />
-            <div className="sort">
-              Recommended
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-              >
-                <path
-                  d="M3 5.5L8 10.5L13 5.5"
-                  stroke="black"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
+            {window.innerWidth > 700 ? (
+              <div className="sort">
+                Recommended
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M3 5.5L8 10.5L13 5.5"
+                    stroke="black"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            ) : (
+              <div className="filter">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                >
+                  <path
+                    d="M22 19.1949C22 19.3938 21.921 19.5846 21.7803 19.7252C21.6397 19.8659 21.4489 19.9449 21.25 19.9449H16.15C15.983 20.5678 15.6151 21.1181 15.1034 21.5107C14.5918 21.9032 13.9649 22.1159 13.32 22.1159C12.6751 22.1159 12.0482 21.9032 11.5366 21.5107C11.0249 21.1181 10.657 20.5678 10.49 19.9449H2.75C2.55109 19.9449 2.36032 19.8659 2.21967 19.7252C2.07902 19.5846 2 19.3938 2 19.1949C2 18.996 2.07902 18.8052 2.21967 18.6646C2.36032 18.5239 2.55109 18.4449 2.75 18.4449H10.49C10.657 17.822 11.0249 17.2717 11.5366 16.8791C12.0482 16.4866 12.6751 16.2738 13.32 16.2738C13.9649 16.2738 14.5918 16.4866 15.1034 16.8791C15.6151 17.2717 15.983 17.822 16.15 18.4449H21.25C21.4489 18.4449 21.6397 18.5239 21.7803 18.6646C21.921 18.8052 22 18.996 22 19.1949ZM22 5.9849C22 6.18381 21.921 6.37457 21.7803 6.51523C21.6397 6.65588 21.4489 6.7349 21.25 6.7349H18.8C18.633 7.35777 18.2651 7.90814 17.7534 8.30067C17.2418 8.69319 16.6149 8.90595 15.97 8.90595C15.3251 8.90595 14.6982 8.69319 14.1866 8.30067C13.6749 7.90814 13.307 7.35777 13.14 6.7349H2.75C2.65151 6.7349 2.55398 6.7155 2.46299 6.67781C2.37199 6.64011 2.28931 6.58487 2.21967 6.51523C2.15003 6.44558 2.09478 6.3629 2.05709 6.27191C2.0194 6.18091 2 6.08339 2 5.9849C2 5.8864 2.0194 5.78888 2.05709 5.69788C2.09478 5.60689 2.15003 5.52421 2.21967 5.45457C2.28931 5.38492 2.37199 5.32968 2.46299 5.29199C2.55398 5.2543 2.65151 5.2349 2.75 5.2349H13.14C13.307 4.61202 13.6749 4.06165 14.1866 3.66913C14.6982 3.2766 15.3251 3.06384 15.97 3.06384C16.6149 3.06384 17.2418 3.2766 17.7534 3.66913C18.2651 4.06165 18.633 4.61202 18.8 5.2349H21.25C21.3489 5.23355 21.447 5.25203 21.5386 5.28925C21.6302 5.32646 21.7134 5.38165 21.7833 5.45157C21.8532 5.52148 21.9084 5.6047 21.9457 5.6963C21.9829 5.7879 22.0013 5.88603 22 5.9849ZM22 12.5849C22.0013 12.6838 21.9829 12.7819 21.9457 12.8735C21.9084 12.9651 21.8532 13.0483 21.7833 13.1182C21.7134 13.1881 21.6302 13.2433 21.5386 13.2805C21.447 13.3178 21.3489 13.3362 21.25 13.3349H9.55C9.38296 13.9578 9.01509 14.5081 8.50342 14.9007C7.99176 15.2932 7.36489 15.5059 6.72 15.5059C6.07511 15.5059 5.44824 15.2932 4.93658 14.9007C4.42491 14.5081 4.05704 13.9578 3.89 13.3349H2.75C2.55109 13.3349 2.36032 13.2559 2.21967 13.1152C2.07902 12.9746 2 12.7838 2 12.5849C2 12.386 2.07902 12.1952 2.21967 12.0546C2.36032 11.9139 2.55109 11.8349 2.75 11.8349H3.89C4.05704 11.212 4.42491 10.6617 4.93658 10.2691C5.44824 9.8766 6.07511 9.66384 6.72 9.66384C7.36489 9.66384 7.99176 9.8766 8.50342 10.2691C9.01509 10.6617 9.38296 11.212 9.55 11.8349H21.25C21.4489 11.8349 21.6397 11.9139 21.7803 12.0546C21.921 12.1952 22 12.386 22 12.5849Z"
+                    fill="black"
+                  />
+                </svg>
+              </div>
+            )}
           </div>
           <div className="right-bottom">
             <h1 className="order-places">Order from 45 places</h1>
             <div className="menu">
               <div className="food">
                 <img src={firstimage} alt="" />
-                <div className="text">
+                <div className="text-container">
+                  <div className="text">
                   <h1>Yamato Sushi</h1>
                   <p>Sushi, Asian</p>
                   <h2>
@@ -147,10 +167,12 @@ const SearchAndResult: React.FC = () => {
                     <p>Free</p>
                   </h2>
                 </div>
+                </div>
               </div>
               <div className="food">
                 <img src={secondimage} alt="" />
-                <div className="text">
+                <div className="text-container">
+                  <div className="text">
                   <h1>Sushi Hero</h1>
                   <p>Sushi, Asian</p>
                   <h2>
@@ -213,10 +235,12 @@ const SearchAndResult: React.FC = () => {
                     <p>Free</p>
                   </h2>
                 </div>
+                </div>
               </div>
               <div className="food">
                 <img src={third} alt="" />
-                <div className="text">
+                <div className="text-container">
+                  <div className="text">
                   <h1>Katsu Sushi</h1>
                   <p>Sushi, Asian</p>
                   <h2>
@@ -279,10 +303,12 @@ const SearchAndResult: React.FC = () => {
                     <p>Free</p>
                   </h2>
                 </div>
+                </div>
               </div>
               <div className="food">
                 <img src={fourth} alt="" />
-                <div className="text">
+                <div className="text-container">
+                  <div className="text">
                   <h1>Sushi Dream</h1>
                   <p>Sushi, Asian</p>
                   <h2>
@@ -345,10 +371,12 @@ const SearchAndResult: React.FC = () => {
                     <p>Free</p>
                   </h2>
                 </div>
+                </div>
               </div>
               <div className="food">
                 <img src={fifth} alt="" />
-                <div className="text">
+                <div className="text-container">
+                  <div className="text">
                   <h1>Sushi Craft</h1>
                   <p>Sushi, Asian</p>
                   <h2>
@@ -410,6 +438,7 @@ const SearchAndResult: React.FC = () => {
                     </svg>
                     <p>Free</p>
                   </h2>
+                </div>
                 </div>
               </div>
             </div>
