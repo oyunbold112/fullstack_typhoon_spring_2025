@@ -4,7 +4,6 @@ import json
 import psycopg2
 import re
 
-
 # --- Configuration ---
 # Database Connection Details
 DB_NAME = "session_57"
@@ -14,9 +13,7 @@ DB_HOST = "localhost"
 DB_PORT = "5432"
 PORT = 8000 # The port your API server will run on
 
-
 # --- Database Functions ---
-
 
 def db_connect():
    """Establishes a connection to the database."""
