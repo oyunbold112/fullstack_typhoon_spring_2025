@@ -1,0 +1,35 @@
+{% extends 'course/base.html' %}
+{% block content %}
+  <div class="page-header">
+    <h1>Нийт хичээлүүд</h1>
+    {% if user.is_authenticated and user.role == 'teacher' %}
+    <a href="{% url 'course_create' %}" class="btn btn-success">+ Шинэ хичээл нэмэх</a>
+    {% endif %}
+  </div>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Хичээлийн нэр</th>
+        <th>Багш</th>
+        <th>Үйлдэл</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for course in courses %}
+      <tr>
+        <td><a href="{% url 'course_detail' course.pk %}">{{ course.title }}</a></td>
+        <td>{{ course.teacher.username }}</td>
+        <td class="action-links">
+           <a href="{% url 'course_detail' course.pk %}">Харах</a>
+           {% if user == course.teacher %}
+           <a href="{% url 'course_update' course.pk %}" class="edit">Засах</a>
+           <a href="{% url 'course_delete' course.pk %}" class="delete">Устгах</a>
+           {% endif %}
+        </td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="3" style="text-align: center;">Хичээл олдсонгүй.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

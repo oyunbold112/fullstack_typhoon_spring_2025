@@ -1,0 +1,11 @@
+{% extends 'course/base.html' %}
+{% block content %}
+  <h1>{{ course.title }}</h1>
+  <div style="margin-top: 20px;">
+    <p><strong>Багш:</strong> {{ course.teacher.username }}</p>
+    <p><strong>Тайлбар:</strong> {{ course.description }}</p>
+  </div>
+  <div style="margin-top: 20px;">
+    <a href="{% url 'course_list' %}" class="btn btn-secondary">&larr; Буцах</a>
+  </div>
+{% endblock %}

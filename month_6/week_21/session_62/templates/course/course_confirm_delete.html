@@ -1,0 +1,10 @@
+{% extends 'course/base.html' %}
+{% block content %}
+  <h1>Устгахыг баталгаажуулах</h1>
+  <p style="margin-top: 20px;">Та "{{ course.title }}" хичээлийг устгахдаа итгэлтэй байна уу?</p>
+  <form method="post" style="margin-top: 20px;">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Тийм, устгая</button>
+    <a href="{% url 'course_list' %}" class="btn btn-secondary" style="margin-left: 10px;">Үгүй</a>
+  </form>
+{% endblock %}

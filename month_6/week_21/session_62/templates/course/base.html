@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хичээлийн систем</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f4f4f9; margin: 0; color: #333; }
+        .container { max-width: 960px; margin: 0 auto; padding: 20px; }
+        .navbar { background-color: #fff; padding: 1rem 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .navbar .logo { font-size: 1.5rem; font-weight: bold; color: #333; text-decoration: none; }
+        .main-content { background-color: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-top: 20px; }
+        .btn { display: inline-block; padding: 10px 15px; font-size: 14px; font-weight: bold; text-decoration: none; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
+        .btn-primary { background-color: #007bff; }
+        .btn-success { background-color: #28a745; }
+        .btn-danger { background-color: #dc3545; }
+        .btn-secondary { background-color: #6c757d; }
+        .data-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .data-table th, .data-table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        .data-table th { background-color: #343a40; color: white; }
+        .action-links a { margin-right: 10px; text-decoration: none; }
+        .action-links a.edit { color: #ffc107; }
+        .action-links a.delete { color: #dc3545; }
+        form p { margin-bottom: 1rem; }
+        input[type="text"], input[type="password"], textarea { width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        .page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="logo" href="{% url 'course_list' %}">Хичээлийн Систем</a>
+        <div>
+            {% if user.is_authenticated %}
+                <span>Сайн уу, {{ user.username }} ({{ user.get_role_display }})</span>
+                <form action="{% url 'logout' %}" method="post" style="display: inline; margin-left: 15px;">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Гарах</button>
+                </form>
+            {% else %}
+                <a href="{% url 'login' %}" class="btn btn-primary">Нэвтрэх</a>
+            {% endif %}
+        </div>
+    </nav>
+    <div class="container">
+        <main class="main-content">
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+</body>
+</html>
