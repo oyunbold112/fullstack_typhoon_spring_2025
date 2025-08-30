@@ -1,0 +1,17 @@
+{% extends "classroom/base.html" %}
+{% block content %}
+    <h2>Оюутны Хянах самбар</h2>
+    <a href="{% url 'available_classes' %}" class="btn btn-primary mb-3">Боломжит Хичээлүүдийг Харах</a>
+    <h3>Таны Захиалсан Хичээлүүд</h3>
+    {% for res in reservations %}
+        <div class="card mb-2">
+            <div class="card-body">
+                <h5 class="card-title">{{ res.lesson.title }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ res.lesson.teacher.username }} багштай</h6>
+                <p class="card-text">Цаг: {{ res.reservation_time }}</p>
+            </div>
+        </div>
+    {% empty %}
+        <p>Та хараахан хичээл захиалаагүй байна.</p>
+    {% endfor %}
+{% endblock content %}

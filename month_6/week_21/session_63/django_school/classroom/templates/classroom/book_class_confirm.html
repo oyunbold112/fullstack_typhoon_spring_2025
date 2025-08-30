@@ -1,0 +1,17 @@
+{% extends "classroom/base.html" %}
+{% block content %}
+<div class="content-section">
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Захиалга Баталгаажуулах</legend>
+            <h2>"{{ reservation.lesson.title }}" хичээлд суудал захиалахдаа итгэлтэй байна уу?</h2>
+            <p>Цаг: {{ reservation.reservation_time }}</p>
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-success" type="submit">Тийм, Захиалах</button>
+            <a class="btn btn-outline-secondary" href="{% url 'available_classes' %}">Цуцлах</a>
+        </div>
+    </form>
+</div>
+{% endblock content %}

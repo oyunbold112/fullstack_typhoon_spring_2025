@@ -1,0 +1,17 @@
+{% extends "classroom/base.html" %}
+{% block content %}
+    <h2>Боломжит Хичээлүүд</h2>
+    {% for res in reservations %}
+        <div class="card mb-2">
+             <div class="card-body">
+                <h5 class="card-title">{{ res.lesson.title }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Багш: {{ res.lesson.teacher.username }}</h6>
+                <p class="card-text">Цаг: {{ res.reservation_time }}</p>
+                <form action="{% url 'book_class' res.id %}" method="POST" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-success btn-sm">Одоо Захиалах</button>
+                </form>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock content %}
